@@ -17,28 +17,8 @@ app.include_router(auth_routers)
 
 Base.metadata.create_all(bind=engine)
 
-movies = [
-    {
-        "id": 1,
-        "title": "Avatar",
-        "overview": "lo que seaaaaaaa",
-        "year": 2010,
-        "rating": 7.8,
-        "category": "Accion",
-    },
-    {
-        "id": 2,
-        "title": "Avatar",
-        "overview": "lo que seaaaaaaa",
-        "year": 2009,
-        "rating": 7.8,
-        "category": "Adventure",
-    },
-]
-
-
 @app.get(path="/", tags=["Home"])
 def message():
-    return HTMLResponse("<h1>Holaaa</h1>")
+    return HTMLResponse("<h1>Hi from FastAPI</h1>")
 
 
